@@ -1,0 +1,20 @@
+import math
+total_list = []
+start_date = []
+end_date = []
+download_list = []
+
+for k in ent.keys():
+    for k2 in ent[k]:
+        download_list.append(k2["downloads"])
+
+#map, reduce, filter, lambda
+log_list = [math.log(x+1) for x in download_list]
+difference_list = []
+for i in range(1,len(log_list)-1):
+    dif = log_list[i] - log_list[i-1]
+    difference_list.append( (log_list[i] - log_list[i-1]))
+    
+print(difference_list)
+#print(log_list)
+#print(download_list)
